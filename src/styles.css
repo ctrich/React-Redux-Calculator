@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Electrolize&family=Press+Start+2P&display=swap");
+html {
+  font-size: 62.5%;
+}
 
 .container {
   display: flex;
@@ -6,7 +9,15 @@
   align-items: center;
   height: 100vh;
   flex-direction: column;
+  background-color: black;
 }
+
+#header {
+  color: white;
+  font-size: 4rem;
+  margin-bottom: 10rem;
+}
+
 #one {
   grid-area: one;
 }
@@ -65,7 +76,7 @@
 .buttons {
   display: grid;
   background-color: red;
-  grid-gap: 1px;
+  grid-gap: .1rem;
   grid-template-areas:
     "clear clear mul divide"
     "seven eight nine sub"
@@ -75,28 +86,40 @@
 }
 
 .button {
-  border: 1px solid black;
+  border: .1rem solid black;
   font-family: "Electrolize";
-  height: 70px;
-  width: 70px;
+  height: 7rem;
+  width: 7rem;
   background-color: gray;
   color: white;
+  transition: all .2s;
+}
+
+.button:hover {
+  transform: translateY(-.2rem);
+  box-shadow: 0 1rem 2rem rgba(255, 0, 0, 0.4);
+}
+
+.button:active {
+  transform: translateY(1px);
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
 }
 
 #display-container {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  border: 1px solid black;
-  border-bottom: 2px solid red;
-  width: 281px;
-  height: 60px;
+  border: .1rem solid black;
+  border-bottom: .2rem solid red;
+  width: 28.1rem;
+  height: 6rem;
   background-color: gray;
 }
 
 #display {
   font-family: "Press Start 2P";
-  padding-right: 10px;
+  padding-right: 1rem;
   color: white;
-  font-size: 1em;
+  font-size: 1.5rem;
+  overflow: auto;
 }

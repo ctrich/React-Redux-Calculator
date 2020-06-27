@@ -9,7 +9,7 @@ export const getNumber = (state, action) => {
     };
   }
   if (state.operator === null && state.isChained === false) {
-    if (state.firstNum.length >= 18) {
+    if (state.firstNum.length >= 15) {
       return state;
     }
     if (state.firstNum === 0) {
@@ -23,7 +23,7 @@ export const getNumber = (state, action) => {
       lastDigitIsOperator: false
     };
   }
-  if (state.secondNum.length >= 18) {
+  if (state.secondNum.length >= 15) {
     return state;
   }
   if (state.secondNum === 0 && state.negativeNumber) {
