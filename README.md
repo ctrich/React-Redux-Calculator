@@ -1,2 +1,2 @@
 # FCC-calculator
-Created with CodeSandbox
+React and Redux calculator
