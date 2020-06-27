@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&family=Press+Start+2P&display=swap");
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+#one {
+  grid-area: one;
+}
+#two {
+  grid-area: two;
+}
+#three {
+  grid-area: three;
+}
+#four {
+  grid-area: four;
+}
+#five {
+  grid-area: five;
+}
+#six {
+  grid-area: six;
+}
+#seven {
+  grid-area: seven;
+}
+#eight {
+  grid-area: eight;
+}
+#nine {
+  grid-area: nine;
+}
+#zero {
+  grid-area: zero;
+  width: auto;
+}
+#decimal {
+  grid-area: decimal;
+}
+#equals {
+  grid-area: equals;
+  height: auto;
+}
+#clear {
+  grid-area: clear;
+  width: auto;
+}
+#divide {
+  grid-area: divide;
+}
+#multiply {
+  grid-area: mul;
+}
+#subtract {
+  grid-area: sub;
+}
+#add {
+  grid-area: add;
+}
+
+.buttons {
+  display: grid;
+  background-color: red;
+  grid-gap: 1px;
+  grid-template-areas:
+    "clear clear mul divide"
+    "seven eight nine sub"
+    "four five six add"
+    "one two three equals"
+    "zero zero decimal equals";
+}
+
+.button {
+  font-family: "Electrolize";
+  height: 70px;
+  width: 70px;
+  background-color: gray;
+  color: white;
+}
+
+#display-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border: 1px solid black;
+  border-bottom: 2px solid red;
+  width: 281px;
+  height: 60px;
+  background-color: gray;
+}
+
+#display {
+  font-family: "Press Start 2P";
+  padding-right: 10px;
+  color: white;
+  font-size: 1em;
+}

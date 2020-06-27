@@ -1,0 +1,5 @@
+export const SELECT_DECIMAL = "SELECT_DECIMAL";
+export const SELECT_NUMBER = "SELECT_NUMBER";
+export const SELECT_OPERATOR = "SELECT_OPERATOR";
+export const SELECT_CLEAR = "SELECT_CLEAR";
+export const SELECT_EQUAL = "SELECT_EQUAL";
