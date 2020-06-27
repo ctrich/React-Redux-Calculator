@@ -6,6 +6,7 @@ import Buttons from "./components/Buttons";
 export default function App() {
   return (
     <div className="container">
+      <h1 id="header">FCC Calculator</h1>
       <Display />
       <Buttons />
     </div>

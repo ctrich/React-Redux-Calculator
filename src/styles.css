@@ -75,6 +75,7 @@
 }
 
 .button {
+  border: 1px solid black;
   font-family: "Electrolize";
   height: 70px;
   width: 70px;
