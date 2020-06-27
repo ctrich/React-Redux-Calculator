@@ -6,7 +6,6 @@ const initialState = {
   firstNum: 0,
   secondNum: 0,
   operator: null,
-  result: 0,
   isChained: false,
   lastDigitIsOperator: false,
   negativeNumber: false

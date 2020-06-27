@@ -2,7 +2,6 @@ export const getNumber = (state, action) => {
   if (state.isChained === true && state.operator === null) {
     return {
       firstNum: action.payload,
-      result: 0,
       isChained: false,
       secondNum: 0,
       lastDigitIsOperator: false,
@@ -62,7 +61,6 @@ export const checkDecimal = state => {
 export const result = state => {
   if (state.lastDigitIsOperator && state.operator === "-") {
     return {
-      result: +state.firstNum - -state.secondNum,
       firstNum: +state.firstNum - +state.secondNum,
       secondNum: 0,
       operator: null,
@@ -71,7 +69,6 @@ export const result = state => {
   }
   if (state.operator === "+") {
     return {
-      result: +state.firstNum + +state.secondNum,
       firstNum: +state.firstNum + +state.secondNum,
       secondNum: 0,
       operator: null,
@@ -79,7 +76,6 @@ export const result = state => {
     };
   } else if (state.operator === "-") {
     return {
-      result: +state.firstNum - +state.secondNum,
       firstNum: +state.firstNum - +state.secondNum,
       secondNum: 0,
       operator: null,
@@ -87,7 +83,6 @@ export const result = state => {
     };
   } else if (state.operator === "*") {
     return {
-      result: +state.firstNum * +state.secondNum,
       firstNum: +state.firstNum * +state.secondNum,
       secondNum: 0,
       operator: null,
@@ -95,7 +90,6 @@ export const result = state => {
     };
   } else if (state.operator === "/") {
     return {
-      result: +state.firstNum / +state.secondNum,
       firstNum: +state.firstNum / +state.secondNum,
       secondNum: 0,
       operator: null,
