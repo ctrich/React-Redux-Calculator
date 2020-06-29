@@ -1,5 +1,5 @@
 export const getNumber = (state, action) => {
-  if (state.isChained === true && state.operator === null) {
+  if (state.isChained && !state.operator) {
     return {
       firstNum: action.payload,
       isChained: false,
@@ -8,7 +8,8 @@ export const getNumber = (state, action) => {
       negativeNumber: false
     };
   }
-  if (state.operator === null && state.isChained === false) {
+ 
+  if (!state.operatorl && !state.isChained) {
     if (state.firstNum.length >= 15) {
       return state;
     }
@@ -106,7 +107,7 @@ export const getOperator = (state, action) => {
       isChained: false
     };
   }
-  if (state.isChained === true) {
+  if (state.isChained) {
     return {
       ...result(state),
       operator: action.payload,
