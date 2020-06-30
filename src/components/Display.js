@@ -4,13 +4,11 @@ import { connect } from "react-redux";
 class Display extends React.Component {
   showDisplay = () => {
     const { operator, firstNum, secondNum } = this.props.input;
-    if (operator === null) {
-      return <span id="display">{firstNum}</span>;
-    } else if (operator !== null && secondNum === 0) {
-      return <span id="display">{operator}</span>;
-    } else {
-      return <span id="display">{secondNum}</span>;
-    }
+    return (
+      (!operator && <span id="display">{firstNum}</span>) ||
+      (operator && secondNum === 0 && <span id="display">{operator}</span>) || 
+      (<span id="display">{secondNum}</span>)
+    );
   };
 
   render() {
