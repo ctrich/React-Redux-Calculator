@@ -1,2 +1,2 @@
-# FCC-calculator
+# Calculator
 React and Redux calculator
